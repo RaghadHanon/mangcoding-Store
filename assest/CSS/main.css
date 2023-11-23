@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+ font-family: 'Poppins', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style-type:none;
+}
+.container{
+  width:calc(100% - 120px);
+  margin: auto;
+}
+
+
+/*header*/
+header {
+  position: sticky;
+  top:0;
+  box-shadow: 0px 1.6474391222000122px 8.23719596862793px 0px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+header .container .row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:center ;
+
+  padding: 16px;
+}
+
+header .container .row .logo{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center ;
+  gap: 10px;
+}
+header .container .row .logo a{
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(84, 91, 232, 1);
+}
+header .container .row .logo img{
+  width: 30px;
+}
+
+header .container .row nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap:30px;
+}
+header .container .row nav ul a{ 
+ color: rgba(16, 25, 40, 1);
+ font-size: 13px;
+ font-weight: 500;
+ 
+}
+header .container .row nav ul .active{
+ font-weight: 600;
+}
+
+header .container .row .auth{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+header .container .row .auth a{
+  width:95px;
+  border-radius: 14px;
+  padding: 5px 10px;
+
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+
+  border: 2px;
+  border-style: solid;
+  border-color: rgba(84, 91, 232, 1);
+
+}
+header .container .row .auth .log_in{
+  color: rgba(84, 91, 232, 1);
+}
+header .container .row .auth .register{
+  background-color: rgba(84, 91, 232, 1);
+  color: rgba(255, 255, 255, 1);
+  
+}
+
