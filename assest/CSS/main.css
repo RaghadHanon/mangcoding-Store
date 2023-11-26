@@ -275,6 +275,7 @@ main .courses .course-item .detailes{
 }
 main .courses .course-item .detailes h2{
   font-weight: 700;
+  font-size: 25px;
 
   position: relative;
   top: 0;
