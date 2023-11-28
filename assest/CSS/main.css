@@ -103,43 +103,44 @@ header .auth .register{
 }
 
 /*start section*/
-.start {
+main .start {
   margin-top: 90px;
   background-color: rgba(245, 245, 245, 1);
 
   height: 700px;
 }
-.start .row{
+main .start .row{
   position: relative;
   top: 0px;
 
   padding: 20px 0px;
 }
-.start .begins{
+main .start .begins{
   width: calc((100% - 60px)/2);
 
   display:flex;
   flex-direction: column;
   gap: 30px;
 }
-.start span{
+main .start span{
   color: rgba(84, 91, 232, 1);
 }
-.start span .focus{
+main .start span .focus{
   font-weight: 700;
 }
-.start h2{
+main .start h2{
   font-size: 60px;
+  font-weight: 900;
 }
-.start p{
+main .start p{
   color: rgba(150, 150, 150, 1);
 }
-.start .begins .row{
+main .start .begins .row{
   justify-content: flex-start;
   align-items: center;
   gap: 50px;
 }
-.start .begins .register{
+main .start .begins .register{
   color: #fff;
   background-color: rgba(84, 91, 232, 1);
   width: 150px;
@@ -151,7 +152,7 @@ header .auth .register{
   font-size: 17px;
   font-weight: 700;
 }
-.start .play-video{
+main .start .play-video{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -160,12 +161,78 @@ header .auth .register{
   font-size: 17px;
   font-weight: 700;
 }
-.start img {
+main .start .play-video a{
+  color: #000;
+}
+main .start img {
   width: calc((100% - 60px)/2);
 
   position: absolute;
   top: -50px;
   right: 0px;
+}
+
+
+
+/*selected course section*/
+main .selected-course {
+  background-color:  rgba(39, 45, 176, 1);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  
+  height: 700px;
+}
+main .selected-course .row{
+  padding: 20px 0px;
+}
+main .selected-course .detailes{
+  width: calc(((100% - 110px)*1/2));
+
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .selected-course .suptitle{
+  color:   rgba(240, 201, 50, 1);
+}
+main .selected-course h3{
+  font-size: 50px;
+  font-weight: 700;
+  color:rgba(255, 255, 255, 1)
+}
+main .selected-course p{
+  color: rgba(221, 221, 221, 1)
+}
+main .selected-course ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main .selected-course ul li{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 5px;
+}
+main .selected-course ul li .number{
+  color:   rgba(240, 201, 50, 1);
+  font-size: 17px;
+  font-weight: 700;
+  
+}
+main .selected-course ul li .title{
+  color:   rgba(221, 221, 221, 1);
+  
+}
+main .selected-course img {
+  width: calc((100% - 110px)/2);
 }
 
 
@@ -176,7 +243,7 @@ header .auth .register{
 main .courses .row{
   align-items: flex-start;
   gap: 50px;
-  padding: 50px 0px;
+  padding: 50px;
 }
 main .courses .section-part1 {
   width:calc((100% - 50px)* 2/3);
@@ -311,6 +378,8 @@ main .courses .section-part2 .see-all{
   color: rgba(255, 255, 255, 1);
   padding: 7px;
 }
+
+
 
 /*Testimonials*/
 main .testimonials {
