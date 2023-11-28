@@ -160,6 +160,9 @@ header .auth .register{
   font-size: 17px;
   font-weight: 700;
 }
+.start .play-video a{
+  color: #000;
+}
 .start img {
   width: calc((100% - 60px)/2);
 
