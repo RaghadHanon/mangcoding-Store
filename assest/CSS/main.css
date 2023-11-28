@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mada&display=swap');
 
 *{
   margin: 0;
@@ -20,7 +21,12 @@ ul{
   width:calc(100% - 120px);
   margin: auto;
 }
-
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:center ;
+}
 
 /*header*/
 header {
@@ -32,35 +38,30 @@ header {
   background-color: #fff;
 }
 header .row{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items:center ;
-
   padding: 16px;
 }
 
-header .row .logo ,.footer-part1 .logo {
+header .logo ,footer .logo {
   display: flex;
   flex-wrap: wrap;
   align-items:center ;
   gap: 10px;
 }
-header .row .logo a{
+header .logo a{
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
   color: rgba(84, 91, 232, 1);
 }
-header  .row .logo img{
+header .logo img{
   width: 30px;
 }
 
-header  .row nav ul{
+header nav ul{
   display: flex;
   flex-wrap: wrap;
   gap:30px;
 }
-header  .row nav ul a{ 
+header nav ul a{ 
  color: rgba(16, 25, 40, 1);
  font-size: 13px;
  font-weight: 500;
@@ -196,11 +197,9 @@ footer .footer-part2 ul a{
 main .courses{
   margin: 50px 0 ;
 }
-main .row{
-  display: flex;
-  flex-wrap: wrap;
+main .courses .row{
+  align-items: flex-start;
   gap: 50px;
-  padding: 40px;
 }
 main .courses .section-part1 {
   width:calc((100% - 50px)* 2/3);
@@ -218,15 +217,30 @@ main .courses .course-item {
   border-radius: 10px;
 }
 
-main .courses .course-item .img-container{
+main .courses .course-item .course-card{
   width: 100%;
 
   position: relative;
   top: 0;
 }
 
-main .courses .course-item .img-container::before{
-  content: 'Best Course';
+main .courses .course-item .course-info{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.00) 75%, #000 100%);
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 15px 15px;
+  
+}
+
+main .courses .course-item .reveiw{
   font-size:16;
   font-weight: 700;
   text-align: center;
@@ -238,64 +252,53 @@ main .courses .course-item .img-container::before{
 
   padding: 8px 8px;
 
-  position: absolute;
-  top: 25px;
-  left: 0px;
+  align-self: flex-start;
+
 }
-main .courses .course-item .img-container::after{
-  content: '$ 20 USD';
+main .courses .course-item .price{
   font-size: 20px;
   font-weight: 900;
   text-align: center;
 
   color: rgba(255, 255, 255, 1);
 
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
+  align-self: flex-end;
 }
 main .courses .course-item img{
   width: 100%;
   display: block;
 
 }
-main .courses .course-item .layer{
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.00) 75%, #000 100%);
-  width: 100%;
-  height: 100%;
-
-  position: absolute;
-  top: 0px;
-  
-}
-
 
 main .courses .course-item .detailes{
-  padding: 20px;
+  padding: 15px;
+}
+main .courses .course-item .detailes .first {
+  align-items: center;
+  
+  padding: 2.5px;
+}
+main .courses .course-item .detailes .second{
+  justify-content:flex-start;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 2.5px;
 }
 main .courses .course-item .detailes h2{
   font-weight: 700;
   font-size: 25px;
-
-  position: relative;
-  top: 0;
 }
-main .courses .course-item .detailes ::after{
-  content: '1,500 Views';
-  
+main .courses .course-item .detailes .views{
   color: rgba(84, 91, 232, 1);
   font-size: 11px;
   font-weight: 400;
 
-  position: absolute;
-  right: 0px;
-  top:10px;
 
 }
-main .courses .course-item .detailes p{
+main .courses .course-item .detailes span{
   display: inline;
   color: rgba(150, 150, 150, 1);
-  margin:5px 10px 0px 0px;
 }
 
 main .courses .section-part2 {
@@ -330,4 +333,75 @@ main .courses .section-part2 .see-all{
   background-color: rgba(84, 91, 232, 1);
   color: rgba(255, 255, 255, 1);
   padding: 7px;
+}
+
+/*Testimonials*/
+main .testimonials {
+  padding: 50px;
+}
+main .testimonials .row {
+  padding: 50px;
+  gap: 50px;
+}
+main .testimonials h2{
+  width: 100%;
+  text-align: center;
+
+  font-size: 35px;
+  font-family: 'Mada', sans-serif;
+  font-weight: 700;
+}
+main .testimonials .testimonial{
+  width:calc((100% - 50px)/2);
+  padding: 30px;
+
+  box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.1);
+
+  position: relative;
+  top:0px;
+}
+
+main .testimonials .testimonial::after{
+  content: '';
+  border-top: 60px solid rgba(244, 244, 244, 1) ;
+  border-left: 60px solid rgba(146, 42, 42, 0) ;
+  border-bottom: 60px solid rgba(173, 95, 95, 0) ;
+
+  
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+main .testimonial .profile{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+main .testimonial .profile-info{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+
+}
+main .testimonial .profile-info .name{
+  font-size: 16px;
+  font-weight: 700;
+}
+main .testimonial .profile-info .description{
+  font-size: 12px;
+  color: rgba(150, 150, 150, 1);
+}
+main .testimonial .profile img{
+ width:50px;
+ height: 50px;
+ border-radius: 50%;
+}
+main .testimonial .rating{
+  padding: 20px 0px;
+}
+main .testimonial blockquote{
+  color: rgba(100, 100, 100, 1);
 }
