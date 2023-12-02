@@ -27,11 +27,25 @@ ul{
   justify-content: space-between;
   align-items:center ;
 }
-.focus:hover .trans , .trans:hover{
+
+@keyframes rotate{
+  0%{
+    transform:rotate(0deg) ;
+    
+  }
+  100%{
+    transform:rotate(360deg) ;
+  }
+}
+.focus:hover .trans , .trans:hover {
   transition: transform .8s ease-in-out;
   transform:scale(1.1) ;
 }
+.trans:hover .rotate {
 
+  animation: rotate;
+  animation-duration: 2.5s;
+}
 /*header*/
 header {
   position: sticky;
