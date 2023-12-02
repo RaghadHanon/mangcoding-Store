@@ -27,22 +27,9 @@ ul{
   justify-content: space-between;
   align-items:center ;
 }
-
-@keyframes changeScale{
-  0%{
-    transform:scale(1) ;
-  }
-  50%{
-    transform:scale(1.1) ;
-  }
-  100%{
-  transform:scale(1) ;
-  }
-}
 .focus:hover .trans , .trans:hover{
-  animation:changeScale;
-  animation-duration: 1.5s;
-  transition: animation 1.5s ease-in-out;
+  transition: transform .8s ease-in-out;
+  transform:scale(1.1) ;
 }
 
 /*header*/
